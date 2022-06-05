@@ -13,7 +13,8 @@
     "prettier": "prettier --write .",
     "build:esm": "rollup --config build/rollup.esm.config.js",
     "build:umd": "rollup --config build/rollup.umd.config.js",
-    "clean": "rimraf ./dist"
+    "clean": "rimraf ./dist",
+    "prepublishOnly": "npm run build"
   },
   "dependencies": {
     "lodash-es": "^4.17.21"
@@ -43,5 +44,6 @@
     "vite": "^2.9.9",
     "vue": "^3.2.25",
     "vue-tsc": "^0.34.7"
-  }
+  },
+  "files": ["dist"]
 }
